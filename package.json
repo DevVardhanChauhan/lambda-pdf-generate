@@ -1,0 +1,21 @@
+{
+	"name": "lambda-pdf-generate",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.6.1",
+	"devDependencies": {
+		"@biomejs/biome": "2.2.7",
+		"@types/aws-lambda": "^8.10.156",
+		"@types/node": "^24.9.1",
+		"esbuild": "^0.25.11",
+		"esbuild-node-externals": "^1.18.0",
+		"typescript": "^5.9.3"
+	}
+}
