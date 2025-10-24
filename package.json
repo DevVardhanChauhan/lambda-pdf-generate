@@ -4,12 +4,17 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js"
+		"build": "node build.mjs",
+		"zip": "rm -f lambda.zip && cd dist && zip -r ../lambda.zip ."
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"packageManager": "pnpm@10.6.1",
+	"packageManager": "pnpm@10.19.0+sha512.c9fc7236e92adf5c8af42fd5bf1612df99c2ceb62f27047032f4720b33f8eacdde311865e91c411f2774f618d82f320808ecb51718bfa82c060c4ba7c76a32b8",
+	"dependencies": {
+		"@sparticuz/chromium": "^141.0.0",
+		"playwright-core": "^1.56.1"
+	},
 	"devDependencies": {
 		"@biomejs/biome": "2.2.7",
 		"@types/aws-lambda": "^8.10.156",
