@@ -4,18 +4,23 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js"
+		"build": "node build.mjs && cp -r node_modules dist/"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"packageManager": "pnpm@10.6.1",
+	"dependencies": {
+		"chrome-aws-lambda": "^10.1.0",
+		"esbuild": "^0.25.11",
+		"esbuild-node-externals": "^1.18.0",
+		"playwright-core": "^1.56.1",
+		"typescript": "^5.9.3"
+	},
 	"devDependencies": {
 		"@biomejs/biome": "2.2.7",
 		"@types/aws-lambda": "^8.10.156",
 		"@types/node": "^24.9.1",
-		"esbuild": "^0.25.11",
-		"esbuild-node-externals": "^1.18.0",
-		"typescript": "^5.9.3"
+		"lambdafs": "^2.1.1"
 	}
 }
